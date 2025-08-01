@@ -36,7 +36,7 @@ RUN apt-get clean && \
     procps \
     curl \
     && rm -rf /var/lib/apt/lists/*
-RUN pip install uv -i https://pypi.tuna.tsinghua.edu.cn/simple/
+RUN pip install uv -i https://pypi.org/simple/
 
 # 最终运行阶段
 FROM docker.m.daocloud.io/library/python:3.11-slim
