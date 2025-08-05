@@ -251,7 +251,7 @@ Replace all occurrences of ${DEFAULT_MODEL} with deepseek/deepseek-chat
 docker build -t genie:latest .
 
 4.Launch the Docker container
-docker run -d -p 3000:3000 -p 8080:8080 -p 1601:1601 --name genie-app genie:latest
+docker run -d -p 3000:3000 -p 8181:8181 -p 1601:1601 --name genie-app genie:latest
 
 5.Access Genie via browser
 Open http://localhost:3000

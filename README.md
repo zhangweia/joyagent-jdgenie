@@ -239,7 +239,7 @@ JoyAgent-JDGenie是一个通用的多智能体框架，对于用户需要定制�
 docker build -t genie:latest .
 
 4. 启动dockerfile
-docker run -d -p 3000:3000 -p 8080:8080 -p 1601:1601 --name genie-app genie:latest
+docker run -d -p 3000:3000 -p 8181:8181 -p 1601:1601 --name genie-app genie:latest
 
 5. 浏览器输入 localhost:3000 访问genie
 ```

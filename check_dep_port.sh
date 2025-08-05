@@ -84,7 +84,7 @@ fi
 
 # 检查必要的端口是否被占用
 echo -e "${BLUE}检查端口占用情况...${NC}"
-PORTS=(3000 8080 1601 8188)
+PORTS=(3000 8181 1601 8188)
 for port in "${PORTS[@]}"; do
     if lsof -Pi :$port -sTCP:LISTEN -t >/dev/null 2>&1; then
         echo -e "${YELLOW}⚠️  端口 $port 已被占用${NC}"

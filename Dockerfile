@@ -110,7 +110,7 @@ WORKDIR /app
 COPY start_genie.sh .
 RUN chmod +x start_genie.sh
 
-EXPOSE 3000 8080 1601
+EXPOSE 3000 8181 1601
 
 # 健康检查
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \

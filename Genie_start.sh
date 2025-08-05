@@ -255,7 +255,7 @@ wait_for_services() {
     
     local services=(
         "前端服务:3000"
-        "后端服务:8080" 
+        "后端服务:8181" 
         "工具服务:1601"
         "MCP客户端:8188"
     )
@@ -324,7 +324,7 @@ wait_for_services() {
 show_service_info() {
     local services=(
         "前端界面:3000"
-        "后端API:8080" 
+        "后端API:8181" 
         "工具服务:1601"
         "MCP客户端:8188"
     )
@@ -346,7 +346,7 @@ show_service_info() {
         echo "=================================="
         echo -e "${BLUE}服务访问地址：${NC}"
         echo -e "  🌐 前端界面: ${GREEN}http://localhost:3000${NC}"
-        echo -e "  🔧 后端API: ${GREEN}http://localhost:8080${NC}"
+        echo -e "  🔧 后端API: ${GREEN}http://localhost:8181${NC}"
         echo -e "  🛠️  工具服务: ${GREEN}http://localhost:1601${NC}"
         echo -e "  🔌 MCP客户端: ${GREEN}http://localhost:8188${NC}"
     else
@@ -398,7 +398,7 @@ cleanup() {
     
     # 清理占用端口的进程
     echo -e "${BLUE}🔍 清理占用端口的进程...${NC}"
-    PORTS=(3000 8080 1601 8188)
+    PORTS=(3000 8181 1601 8188)
     for port in "${PORTS[@]}"; do
         local pids=$(lsof -ti :$port 2>/dev/null)
         if [ ! -z "$pids" ]; then
